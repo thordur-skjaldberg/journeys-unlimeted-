@@ -1,0 +1,84 @@
+
+  dl {
+    margin: 0;
+  }
+  footer {
+    color: var(--a); 
+  }
+  .footerbg {
+    background-color: burlywood;
+  } 
+  footer li,
+  .downlbutts,
+  .socialbutts {
+    list-style: none;
+  }
+  .socialbutts a {
+    text-decoration: none;
+  }
+  .downlbutts a:hover,
+  .socialbutts a:hover {
+    text-decoration: underline;
+  }
+  
+  .downlbutts a {
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    padding-left: 1.5em;
+    text-decoration: none;
+    color: var(--a); 
+  }
+  
+head{
+  color: var(--a); 
+}
+.thead {
+  background-color: aquamarine;
+  } 
+  .header2{
+    background-image: url(/website/images/solsetur.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed; 
+    margin: 0  ;
+    padding: 0;
+    line-height: 1,4;
+    color: whitesmoke;
+    }  
+    .header3{
+        background-image: url(/website/images/palmatree.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 200%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-attachment: fixed; 
+        margin: 0  ;
+        padding: 0;
+        line-height: 1,4;
+        color: whitesmoke;
+        } 
+        .header4{
+            background-image: url(/website/images/antartica.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 200%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-attachment: fixed; 
+            margin: 0  ;
+            padding: 0;
+            line-height: 1,4;
+            color: whitesmoke;
+            } 
+         
+ 

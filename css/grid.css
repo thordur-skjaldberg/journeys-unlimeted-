@@ -1,0 +1,81 @@
+/* - Veljið ykkar Grid lausn: https://gridbyexample.com/examples/ */
+
+/* 6 dálka grid -  Mobile up 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  row-gap: 2em;
+}
+.col-6f {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.container {
+  padding:1em;
+}
+/* vinnurammi til að sjá div*/
+.rammi div{
+  border: 1px dashed #06664e;
+  text-align: center;
+  padding: .5em 0;
+  margin: .5em 0;
+}
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Larger than mobile */
+@media screen and (min-width: 30em) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media screen and (min-width: 37.5em) {
+  .col-2,
+  .col-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .col-3,
+  .col-5,
+  .col-6 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Larger than mobile */
+@media screen and (min-width: 48em) {
+  .col-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .col-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .col-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* Larger than tablet */
+@media screen and (min-width: 60em) {
+  .container {
+    max-width: 60em;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 80em) {
+  .container {
+    max-width: 80em;
+    
+  }
+}
+

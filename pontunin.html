@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<link rel="stylesheet" href="css/styles.css"> 
+<script>
+  function changeState(check1) 
+  {
+      var sel = document.getElementById("select1")
+      sel.disabled = check1.checked ? false : true;
+      if (!select1.disabled)
+      {
+          select1.focus();
+      }
+  }
+</script>
+<section class="container">
+  <div>
+    <form action="takk.html" method="GET"><!--"POST" er notað þegar upplýsingar eru sendar úr formi-->
+        <fieldset class="register"><!--nota klasa til að geta haft aðra forma með öðru útliti - sjá css-->
+          
+          <legend><h1></h1>ferðarpontun</legend>
+          <p><!--autofocus-->
+              Nafn:  
+              <input type="text" 
+                      name="nafn" 
+                      placeholder="Full name" 
+                      required 
+                      title="Vinsamlegast skráið nafn"> <!--ATH! input hefur ekki lokunartag -->
+          </p>
+            <p>Kyn: 
+              <input type="radio" name="kyn" value="Hann" id="Hann">
+              <label for="Hann">Hann</label> |
+              <input type="radio" name="kyn" value="Hún" id="Hún"> 
+              <label for="Hún">Hún</label> |
+              <input type="radio" name="kyn" value="Hán" id="Hán"> 
+              <label for="Hán">Hán</label> 
+            </p>
+            <p>
+                Símanúmer: 
+                <input  type="text" 
+                        name="sími" 
+                        placeholder="Telephone (7 digits)"
+                        title="Vinsamlegast skráið aðeins 7 tölustafi"
+                        required
+                        pattern="\d{3}(?:[\-\s]?)\d{4}">
+            </p>    <!-- http://html5pattern.com/Phones "\d{3}(?:[\-\s]?)\d{4}" -->
+            <p>
+              Tölvupóstur: 
+              <input  type="email" 
+                      name="tölvupóstur" 
+                      placeholder="Email address" 
+                      required>
+            </p>
+            <section class="col-3">
+              <p> 
+                Ferðir í boði: 
+                <select name="ferdaval">
+            <option value="1">basic</option>
+            <option value="2">deluxe</option>
+            <option value="3">deluxe+</option>
+            <option value="4">ultra</option>
+                </select>
+              </p>
+              <p>
+                Fjöldi ferðamanna: <input type="number">
+              </p>
+              <p>
+                Dagsetning ferðar: 
+                  <input type="date">
+              </p>
+            </section>
+            <p>
+                <!--https://www.w3schools.com/tags/att_textarea_rows.asp-->
+                <textarea rows="4" name="comment" placeholder="Ábending - Comment"></textarea>
+            </p>
+            <p>
+              <input type="checkbox" name="postlist" value="OK" id="plist"> 
+              <label for="plist">Skráið mig á póstlistann</label> |
+              <input type="checkbox" name="subscription" value="OK" id="sub"> 
+              <label for="sub">Gerast áskrifandi </label>
+            </p><p>
+              <input type="checkbox" id="check1" name="select-x" onclick="changeState(this)">
+              <label for="check1">Sendið mér nánari upplýsingar um </label>
+             <div class="center">
+              til að borga itu á takkan til hægri  
+              
+              <button type="submit" name="submit" class="credit-card-button">
+                <img src="images/SVG/credit-card.svg" alt="Credit Card Icon">
+              </div >
+              </button>
+             
+            
+                  
+                  </div>
+              </div>
+        </fieldset>
+    </form>
+  </div>
+</section>
+</main>
+<section class="col-2 ">
+         
+  <!-- FIRST TAB -->
+  <div class="tab">
+    <input id="tab-1r" type="radio" name="tabr">
+    <label for="tab-1r">basic</label>
+    <div class="content"><p>basic pakkin kostar bara 50000kr og 
+      hann inniheldur Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nisi optio nostrum, vel provident inventore sapiente quam eaque fugiat consequatur possimus illo voluptas deleniti. Porro asperiores modi incidunt laborum ipsum?  </p></div>
+  </div>
+
+  <!-- SECOND TAB -->
+  <div class="tab">
+    <input id="tab-2r" type="radio" name="tabr">
+    <label for="tab-2r">basic plus</label>
+    <div class="content"><p>basic plus kostar bara 100000kr og
+      hann inniheldur Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dignissimos laborum culpa quisquam? Saepe quaerat fugiat suscipit rerum, hic non magnam placeat eum eos inventore facere error qui explicabo sint. </p></div>
+  </div>
+
+  <!-- THIRD TAB -->
+  <div class="tab">
+    <input id="tab-3r" type="radio" name="tabr">
+    <label for="tab-3r">deluxe</label>
+    <div class="content"><p>og deluxe kostar  500000kr
+      hann inniheldur Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, consectetur autem impedit libero ullam ipsa quae corrupti sit nemo vitae cupiditate asperiores sapiente beatae pariatur. Similique sequi rem dignissimos perferendis.</p></div>
+  </div> 
+   <!-- fjorða tab -->
+   <div class="tab">
+    <input id="tab-4r" type="radio" name="tabr">
+    <label for="tab-4r">ultra</label>   
+    <div class="content"><p> 1000000kr
+      hann inniheldur allt sem hinnir pakkarnir hafa</p></div>
+  </div>
+
+  </div>
+</section>
+<section>
+
+<footer class="container col-3 ">
+<nav>
+  <ul class="socialbutts">
+    <li><a href="#"><span class="icon-link"></span> Eveniet ducimus pariatur</a></li>
+    <li><a href="#"><span class="icon-link"></span> Vitae animi, sed provident</a></li>
+    <li><a href="#"><span class="icon-link"></span> Lorem ipsum dolor sit amet</a></li>
+    <li><a href="#"><span class="icon-link"></span> Provident sit aliquid</a></li>
+  </ul>
+</nav>
+<nav>
+  <ul class="socialbutts">
+    <li><a href="#"><span class="icon-facebook2"></span> Groovy on Facebook</a></li>
+    <li><a href="#"><span class="icon-twitter"></span> Groovy on Twitter</a></li>
+    <li><a href="#"><span class="icon-github"></span> Groovy on Github</a></li>
+    <li><a href="#"><span class="icon-soundcloud2"></span> Groovy on Soundcloud</a></li>
+  </ul>
+</nav>
+<div>
+  <dl>              <!--Description list -->
+   <li><dt>Nafn</dt></li>
+   <li><dd>þorður skjaldberg</dd>
+    <li><dt>Tölvupóstur</dt>
+    <li><dd>1tordur@gmail.com</dd>
+    <li><dt>braut</dt>
+    <li><dd>tolvubraut honnun</dd>
+    </section>
+    </dl>
+</div>
+</footer>
+<p class="center">þs 2023</p>
+
+</div>
+</body>
+</html>
